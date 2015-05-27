@@ -21,11 +21,12 @@ class RubyTruth
   end
 
   def evaluate(arg)
-    return arg.to_s if arg.is_a? Boolean
-
-    if arg.is_a? Integer
+    case arg
+    when Boolean
+      arg.to_s
+    when Integer
       'truthy'
-    elsif arg.nil?
+    when nil
       'falsey'
     else
       evaluate(eval arg)
