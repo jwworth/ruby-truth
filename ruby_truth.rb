@@ -39,5 +39,6 @@ class RubyTruth
   end
 end
 
-# Uncomment to play
-# puts RubyTruth.new.play
+if __FILE__ == $0
+  puts RubyTruth.new.play
+end
